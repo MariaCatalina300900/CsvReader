@@ -23,6 +23,13 @@ public class main {
 	   String csvFile = csvFile1;
 		BufferedReader br = null;
 		String line = "";
+		int promedioIndividual=0;
+		int promedio1=0;
+		int promedio2=0;
+		int promedio3=0;
+		int promedio4=0;
+		
+		
 		try
 		{
 			String[] tempArr;
@@ -31,13 +38,34 @@ public class main {
 			
 			while((line = br.readLine()) != null) {
 	            tempArr = line.split(delimiter);
-	            for(String tempStr : tempArr) {
-	               System.out.print(tempStr + " - ");
+	            promedioIndividual+=Integer.parseInt(tempArr[2]);
+	            promedioIndividual+=Integer.parseInt(tempArr[3]);
+	            promedioIndividual+=Integer.parseInt(tempArr[4]);
+	            promedioIndividual+=Integer.parseInt(tempArr[5]);
+	            promedioIndividual=promedioIndividual/4;
+	            promedio1+=Integer.parseInt(tempArr[2]);
+	            promedio2+=Integer.parseInt(tempArr[3]);
+	            promedio3+=Integer.parseInt(tempArr[4]);
+	            promedio4+=Integer.parseInt(tempArr[5]);
+	           
+	            
+	            
+	            System.out.println(tempArr[1]+": "+promedioIndividual);
+	            promedioIndividual=0;
 	            }
+			    promedio1=promedio1/19;
+	            promedio2=promedio2/19;
+	            promedio3=promedio3/19;
+	            promedio4=promedio4/19;
+			    System.out.println("Promedio 1:"+ promedio1);
+			    System.out.println("Promedio 2:"+ promedio2);
+			    System.out.println("Promedio 3:"+ promedio3);
+			    System.out.println("Promedio 4:"+ promedio4);
 	            System.out.println();
-			}
+			
 			 br.close();
-		}	
+		
+       }
 		
 		catch(IOException ioe) {
         ioe.printStackTrace();
