@@ -57,10 +57,10 @@ public class main {
 	            promedio2=promedio2/19;
 	            promedio3=promedio3/19;
 	            promedio4=promedio4/19;
-			    System.out.println("Promedio 1:"+ promedio1);
-			    System.out.println("Promedio 2:"+ promedio2);
-			    System.out.println("Promedio 3:"+ promedio3);
-			    System.out.println("Promedio 4:"+ promedio4);
+			    System.out.println("Promedio 1: "+ promedio1);
+			    System.out.println("Promedio 2: "+ promedio2);
+			    System.out.println("Promedio 3: "+ promedio3);
+			    System.out.println("Promedio 4: "+ promedio4);
 	            System.out.println();
 			
 			 br.close();
